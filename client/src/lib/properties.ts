@@ -52,7 +52,6 @@ export const PROPERTIES: Property[] = [
   { id: 5, name: "Coral Village", region: 1, address: "", city: "Cape Coral", state: "FL", units: 72, type: "Section 8", website: "", apartmentsCom: "", notes: "", lat: 26.5629, lng: -81.9495 },
   { id: 6, name: "Holiday Apartments", region: 1, address: "601 Old Washington Road", city: "Natchez", state: "MS", units: 115, type: "Section 8", website: "", apartmentsCom: "https://www.apartments.com/holiday-apartments-natchez-ms/9b2xv67/", notes: "", lat: 31.5607, lng: -91.4032 },
   { id: 7, name: "Cumberland Apartments", region: 1, address: "100 Cumberland Drive", city: "Crystal Springs", state: "MS", units: 68, type: "Section 8 + Voucher", website: "", apartmentsCom: "https://www.apartments.com/cumberland-apartments-crystal-springs-ms/", notes: "60 HUD / 8 Voucher", lat: 31.9877, lng: -90.3571 },
-  { id: 8, name: "Village Green", region: 1, address: "105 Creek Bend Rd", city: "Natchez", state: "MS", units: 80, type: "Section 8", website: "", apartmentsCom: "https://www.apartments.com/village-green-apartments-natchez-ms/nqq9t7q/", notes: "", lat: 31.5312, lng: -91.3757 },
   { id: 9, name: "Walnut Hill", region: 1, address: "", city: "Natchez", state: "MS", units: 168, type: "Section 8", website: "", apartmentsCom: "", notes: "", lat: 31.5604, lng: -91.4032 },
 
   // Region 2 — OH · TX · CA · MO
