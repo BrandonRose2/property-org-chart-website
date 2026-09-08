@@ -16,3 +16,6 @@
 - [x] Inspect the GitHub Pages deployment and hosting configuration causing the public 404.
 - [x] Confirm the hosting configuration and published artifact were correct; the issue was first-site edge propagation, not an application error.
 - [x] Verify the GitHub Pages URL loads the directory successfully.
+- [ ] Inspect the live Pages HTML, script/style assets, and runtime behavior causing the reported error.
+- [ ] Correct the remaining GitHub Pages deployment or application issue and redeploy.
+- [ ] Confirm the public directory loads in a browser without errors.
