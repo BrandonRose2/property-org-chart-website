@@ -13,3 +13,6 @@
 - [x] Add a GitHub Pages build-and-deploy workflow suitable for the static directory.
 - [x] Create or update the repository, push the source, and activate GitHub Pages.
 - [x] Verify the Pages deployment status and report the public URL; GitHub’s edge host may briefly return a setup 404 during first-site propagation.
+- [x] Inspect the GitHub Pages deployment and hosting configuration causing the public 404.
+- [x] Confirm the hosting configuration and published artifact were correct; the issue was first-site edge propagation, not an application error.
+- [x] Verify the GitHub Pages URL loads the directory successfully.
