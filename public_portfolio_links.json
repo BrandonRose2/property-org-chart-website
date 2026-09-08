@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Arbor Crest",
+    "address": "64 N Cleveland Street",
+    "state": "FL",
+    "type": "Tax Credit / Affordable",
+    "externalLink": "https://arborcrestresidence.com/"
+  },
+  {
+    "name": "The Gates On Manhattan",
+    "address": "1050 Manhattan Blvd",
+    "state": "LA",
+    "type": "Conventional / Section 8",
+    "externalLink": "https://www.thegatesonmanhattan.com"
+  },
+  {
+    "name": "River Garden Estates",
+    "address": "3801 Norwood Ave",
+    "state": "CA",
+    "type": "LIHTC",
+    "externalLink": "https://www.rivergardenestates.com"
+  },
+  {
+    "name": "Grace Townhomes",
+    "address": "1212 Grace Circle",
+    "state": "TX",
+    "type": "Townhomes / LIHTC",
+    "externalLink": "https://gracetownhouses.com/"
+  },
+  {
+    "name": "Walnut Hill Apartments",
+    "address": "102 Lieutenants Run Drive",
+    "state": "VA",
+    "type": "LIHTC",
+    "externalLink": "https://walnuthillresidence.com/"
+  },
+  {
+    "name": "Yorkshire / Windsor Village",
+    "address": "2020 N. Hearne Avenue",
+    "state": "LA",
+    "type": "Tax Credit",
+    "externalLink": "https://windsorhousingapts.com"
+  },
+  {
+    "name": "Pirates Bend Apartments",
+    "address": "8165 Plank Rd",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": "https://piratesbendapts.com/"
+  },
+  {
+    "name": "Howell Place Apartments",
+    "address": "4150 72nd Ave",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": "https://howellplaceapts.com"
+  },
+  {
+    "name": "River Pointe Apartments",
+    "address": "777 Avonia Drive",
+    "state": "OH",
+    "type": "LIHTC",
+    "externalLink": "https://www.riverpointeresidence.com"
+  },
+  {
+    "name": "Grove Park Terrace",
+    "address": "400 Peters St",
+    "state": "TX",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartmentfinder.com/Texas/Waxahachie-Apartments/Grove-Park-Terrace-Apartments"
+  },
+  {
+    "name": "Thomasville Church Homes",
+    "address": "904 Doak Street",
+    "state": "NC",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartmenthomeliving.com/apartment-finder/Thomasville-Church-Homes-Thomasville-NC-27360-1983383"
+  },
+  {
+    "name": "Boca Ciega",
+    "address": "3401 37th Street South",
+    "state": "FL",
+    "type": "Residential",
+    "externalLink": "https://www.affordablehousing.com/saint-petersburg-fl/boca-ciega-townhomes-750808/"
+  },
+  {
+    "name": "Opa Locka",
+    "address": "2860 NW 135th Street",
+    "state": "FL",
+    "type": "Residential",
+    "externalLink": ""
+  },
+  {
+    "name": "Macedonia",
+    "address": "1722 W 17th Street",
+    "state": "FL",
+    "type": "LIHTC",
+    "externalLink": ""
+  },
+  {
+    "name": "Riverchase",
+    "address": "106 Tybee Court",
+    "state": "GA",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartments.com/riverchase-apartments-dover-de/3gnvq4g/"
+  },
+  {
+    "name": "Silver Springs",
+    "address": "950 NE 20th Street",
+    "state": "NC",
+    "type": "LIHTC",
+    "externalLink": ""
+  },
+  {
+    "name": "Marrero 3",
+    "address": "1050 Manhattan Blvd.",
+    "state": "LA",
+    "type": "LIHTC Portfolio",
+    "externalLink": "https://www.apartments.com/diamond-homes-marrero-la/x3prmwp/"
+  },
+  {
+    "name": "St. Charles Place",
+    "address": "1011 18th Street",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": ""
+  },
+  {
+    "name": "Columbia Village Townhomes",
+    "address": "11299 Columbia Village Dr.",
+    "state": "CA",
+    "type": "Townhomes / LIHTC",
+    "externalLink": "https://www.apartments.com/columbia-village-townhomes-sonora-ca/m3vkq5l/"
+  },
+  {
+    "name": "Forest View",
+    "address": "19499 Hess Ave.",
+    "state": "CA",
+    "type": "Affordable / HUD / LIHTC",
+    "externalLink": "https://www.apartments.com/forest-view-senior-apartments-sonora-ca/5ewpb0n/"
+  },
+  {
+    "name": "Oak Hills Apartments",
+    "address": "10260 Preston Lane",
+    "state": "CA",
+    "type": "Affordable / HUD / LIHTC",
+    "externalLink": "https://www.apartments.com/oak-hills-jamestown-ca/tq19dmc/"
+  },
+  {
+    "name": "Pacific Pointe Apartments",
+    "address": "1025 Rosemarie Ln",
+    "state": "CA",
+    "type": "Section 42 LIHTC",
+    "externalLink": ""
+  },
+  {
+    "name": "Granite Ridge Apartments",
+    "address": "246 E Iris Ave",
+    "state": "CA",
+    "type": "Section 42 LIHTC",
+    "externalLink": "https://www.apartments.com/granite-ridge-apartments-stockton-ca/23wqw6b/"
+  },
+  {
+    "name": "Lexington Arms Apartments",
+    "address": "418 Lexington Dr #A",
+    "state": "TX",
+    "type": "LIHTC / Single Family",
+    "externalLink": "https://www.apartments.com/lexington-arms-waxahachie-tx/7vpy3jz/"
+  },
+  {
+    "name": "Breckenridge Village",
+    "address": "2001 N Floyd St.",
+    "state": "TX",
+    "type": "Tax Credit / Single Family",
+    "externalLink": "https://www.apartments.com/breckenridge-village-ennis-tx/9ffc8q6/"
+  },
+  {
+    "name": "The Thibodaux Apartments",
+    "address": "1300 Ridgefield Ave.",
+    "state": "LA",
+    "type": "Low Income Housing",
+    "externalLink": "https://www.apartments.com/colonial-estates-thibodaux-la/ypq74xt/"
+  },
+  {
+    "name": "Village Green Apartments",
+    "address": "105 Creek Bend Rd",
+    "state": "MS",
+    "type": "HUD & Conventional",
+    "externalLink": ""
+  },
+  {
+    "name": "Jefferson Arms Apartments",
+    "address": "1425 E. Clark Ave #K",
+    "state": "FL",
+    "type": "HUD",
+    "externalLink": ""
+  },
+  {
+    "name": "Coral Village",
+    "address": "121 NE 10th Street",
+    "state": "FL",
+    "type": "HUD",
+    "externalLink": "https://www.apartments.com/coral-village-apartments-cape-coral-fl/06r9n60/"
+  },
+  {
+    "name": "Holiday Apartments",
+    "address": "601 Old Washington Road",
+    "state": "MS",
+    "type": "Project-Based Section 8",
+    "externalLink": ""
+  },
+  {
+    "name": "Cumberland Apartments",
+    "address": "100 Cumberland Drive",
+    "state": "MS",
+    "type": "HUD",
+    "externalLink": ""
+  },
+  {
+    "name": "La Promesa",
+    "address": "4590 N Texas Ave",
+    "state": "TX",
+    "type": "HUD / LIHTC",
+    "externalLink": ""
+  },
+  {
+    "name": "Ruby Diamond Homes",
+    "address": "7120 Kayla Ct",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartments.com/diamond-homes-marrero-la/x3prmwp/"
+  },
+  {
+    "name": "Star Homes",
+    "address": "7120 Kayla Ct",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartments.com/diamond-homes-marrero-la/x3prmwp/"
+  },
+  {
+    "name": "North Pointe Apartments",
+    "address": "2580 Freddie St",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": ""
+  },
+  {
+    "name": "Granite Bayou Pointe Apartments",
+    "address": "8139 Fork Bayou Ln",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartments.com/bayou-pointe-subdivision-shreveport-la/qbqqnyw/"
+  },
+  {
+    "name": "Pelican Bay Apartments",
+    "address": "2121 N Lobdell Blvd",
+    "state": "LA",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartments.com/pelican-bay-baton-rouge-la/xcl4ckp/"
+  },
+  {
+    "name": "Wilmington Arms Apartments",
+    "address": "700 W Laurel St",
+    "state": "CA",
+    "type": "Section 8",
+    "externalLink": ""
+  },
+  {
+    "name": "Anaheim Gardens Apartments",
+    "address": "1511 Anaheim St",
+    "state": "CA",
+    "type": "HUD / Section 8",
+    "externalLink": ""
+  },
+  {
+    "name": "Fairfax Senior Terrace Apartments",
+    "address": "737 S Genesee Ave",
+    "state": "CA",
+    "type": "HUD / Section 8",
+    "externalLink": ""
+  },
+  {
+    "name": "Midtown Manor Apartments",
+    "address": "528 W 50th St",
+    "state": "CA",
+    "type": "Section 8",
+    "externalLink": ""
+  },
+  {
+    "name": "Crossroads of Lee's Summit",
+    "address": "220 NE Town Centre Blvd",
+    "state": "MO",
+    "type": "LIHTC",
+    "externalLink": "https://www.apartments.com/crossroads-of-lees-summit-lees-summit-mo/6nvbher/"
+  }
+]

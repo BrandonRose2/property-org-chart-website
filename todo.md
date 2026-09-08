@@ -5,3 +5,6 @@
 - [x] Remove Region 5 and its properties from the directory data and controls.
 - [x] Consolidate New Wilmington Arms as NWA in Region 4 and verify the revised totals.
 - [x] Save a checkpoint and deliver the revised directory.
+- [x] Collect official property website links from apartmentcorp.com and verify each source.
+- [x] Match verified links to active directory properties and update only high-confidence records.
+- [ ] Verify the revised directory, save a checkpoint, and report unmatched properties.
