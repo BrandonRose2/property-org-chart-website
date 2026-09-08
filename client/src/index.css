@@ -30,7 +30,7 @@
 }
 
 /* ===== INDUSTRIAL STEEL COMMAND CENTER THEME ===== */
-/* Dark steel base with metallic accents for property type coding */
+/* Dark steel base with source-org-chart category coding */
 
 :root {
   --radius: 0.375rem;
@@ -56,21 +56,26 @@
   --input: oklch(0.22 0.008 240);
   --ring: oklch(0.65 0.15 220);
 
-  /* Property type metallic colors */
-  --orange-metal-start: #e8a050;
-  --orange-metal-mid: #d88840;
-  --orange-metal-end: #b86820;
-  --orange-metal-shine: #f0b870;
+  /* Source chart key: orange #ED7D31, blue #4472C4, yellow #FFC000, purple #7030A0 */
+  --orange-metal-start: #f08a48;
+  --orange-metal-mid: #ed7d31;
+  --orange-metal-end: #c65e1b;
+  --orange-metal-shine: #f6b17b;
 
-  --blue-metal-start: #5080c8;
-  --blue-metal-mid: #4070b8;
-  --blue-metal-end: #2050a0;
-  --blue-metal-shine: #70a0e0;
+  --blue-metal-start: #6d94d4;
+  --blue-metal-mid: #4472c4;
+  --blue-metal-end: #2f5597;
+  --blue-metal-shine: #9bb5e4;
 
-  --yellow-metal-start: #d8b850;
-  --yellow-metal-mid: #c8a840;
-  --yellow-metal-end: #a88020;
-  --yellow-metal-shine: #e8d070;
+  --yellow-metal-start: #ffd144;
+  --yellow-metal-mid: #ffc000;
+  --yellow-metal-end: #c79200;
+  --yellow-metal-shine: #ffe28a;
+
+  --purple-metal-start: #8c55b5;
+  --purple-metal-mid: #7030a0;
+  --purple-metal-end: #522277;
+  --purple-metal-shine: #b88bce;
 
   --steel-metal-start: #5a6070;
   --steel-metal-mid: #4a5060;
@@ -155,6 +160,12 @@
   color: #fff8e0;
 }
 
+.metal-btn-purple {
+  background: linear-gradient(180deg, var(--purple-metal-start) 0%, var(--purple-metal-mid) 40%, var(--purple-metal-end) 100%);
+  border-color: #522277;
+  color: #fcf7ff;
+}
+
 .metal-btn-steel {
   background: linear-gradient(180deg, var(--steel-metal-start) 0%, var(--steel-metal-mid) 40%, var(--steel-metal-end) 100%);
   border-color: #2a3040;
@@ -193,9 +204,15 @@
 }
 
 .type-badge-yellow {
-  background: linear-gradient(135deg, #1e1600 0%, #141000 100%);
-  border: 1px solid #c8a840;
-  color: #d8b850;
+  background: linear-gradient(135deg, #2a1e00 0%, #1e1600 100%);
+  border: 1px solid #ffc000;
+  color: #ffd144;
+}
+
+.type-badge-purple {
+  background: linear-gradient(135deg, #21102f 0%, #160920 100%);
+  border: 1px solid #7030a0;
+  color: #b88bce;
 }
 
 .type-badge-steel {
@@ -231,6 +248,7 @@
 .property-card.type-orange::before { background: linear-gradient(90deg, var(--orange-metal-end), var(--orange-metal-start), var(--orange-metal-end)); }
 .property-card.type-blue::before { background: linear-gradient(90deg, var(--blue-metal-end), var(--blue-metal-start), var(--blue-metal-end)); }
 .property-card.type-yellow::before { background: linear-gradient(90deg, var(--yellow-metal-end), var(--yellow-metal-start), var(--yellow-metal-end)); }
+.property-card.type-purple::before { background: linear-gradient(90deg, var(--purple-metal-end), var(--purple-metal-start), var(--purple-metal-end)); }
 .property-card.type-steel::before { background: linear-gradient(90deg, var(--steel-metal-end), var(--steel-metal-start), var(--steel-metal-end)); }
 
 .property-card:hover {
@@ -322,9 +340,15 @@
 }
 
 .filter-btn-yellow.active {
-  background: linear-gradient(180deg, #1e1600 0%, #141000 100%);
-  border-color: #c8a840;
-  color: #d8b850;
+  background: linear-gradient(180deg, #2a1e00 0%, #1e1600 100%);
+  border-color: #ffc000;
+  color: #ffd144;
+}
+
+.filter-btn-purple.active {
+  background: linear-gradient(180deg, #21102f 0%, #160920 100%);
+  border-color: #7030a0;
+  color: #b88bce;
 }
 
 /* ===== SEARCH INPUT ===== */
@@ -433,6 +457,14 @@
   height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+.legend-swatch {
+  width: 18px;
+  height: 12px;
+  border-radius: 1px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 1px 3px rgba(0,0,0,0.45);
 }
 
 /* ===== MAP VIEW ===== */

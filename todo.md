@@ -1,0 +1,4 @@
+- [x] Extract every property classification and color-key rule from OrgChart-AllProperties-11-3-25.docx.
+- [x] Compare the document data against the website property records and resolve discrepancies.
+- [x] Update property labels, filters, badges, and color legend to match the org chart.
+- [x] Verify the rendered directory, save a checkpoint, and report the completed revisions.

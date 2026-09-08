@@ -2,7 +2,8 @@
  * Apartment Corp Properties – Org Chart
  * Design: Industrial Steel Command Center
  * Dark steel base, metallic 3D buttons, color-coded property types
- * Orange = Section 8/HUD, Blue = LIHTC, Yellow = Layered HUD/LIHTC
+ * Source chart key: orange = Project Based Section 8; blue = LIHTC;
+ * yellow = Regional HUD; purple = Conventional & Section 8 Vouchers.
  */
 
 import { useState, useMemo, useCallback } from "react";
@@ -33,8 +34,10 @@ import {
 
 function getTypeClass(type: PropertyType): string {
   if (type === "LIHTC") return "blue";
-  if (type === "Layered") return "yellow";
-  return "orange";
+  if (type === "Regional HUD") return "yellow";
+  if (type === "Conventional & Section 8 Vouchers") return "purple";
+  if (type === "Project Based Section 8") return "orange";
+  return "steel";
 }
 
 function TypeBadge({ type }: { type: PropertyType }) {
@@ -558,30 +561,22 @@ export default function Home() {
 
             {/* Type filters */}
             <div className="flex items-center gap-1 flex-wrap">
-              <button
-                className={`filter-btn filter-btn-orange ${typeFilter === "Section 8" ? "active" : ""}`}
-                onClick={() =>
-                  setTypeFilter(typeFilter === "Section 8" ? "all" : "Section 8")
-                }
-              >
-                Section 8 / HUD
-              </button>
-              <button
-                className={`filter-btn filter-btn-blue ${typeFilter === "LIHTC" ? "active" : ""}`}
-                onClick={() =>
-                  setTypeFilter(typeFilter === "LIHTC" ? "all" : "LIHTC")
-                }
-              >
-                LIHTC
-              </button>
-              <button
-                className={`filter-btn filter-btn-yellow ${typeFilter === "Layered" ? "active" : ""}`}
-                onClick={() =>
-                  setTypeFilter(typeFilter === "Layered" ? "all" : "Layered")
-                }
-              >
-                Layered HUD/LIHTC
-              </button>
+              {(
+                [
+                  ["Project Based Section 8", "orange"],
+                  ["LIHTC", "blue"],
+                  ["Regional HUD", "yellow"],
+                  ["Conventional & Section 8 Vouchers", "purple"],
+                ] as const
+              ).map(([type, color]) => (
+                <button
+                  key={type}
+                  className={`filter-btn filter-btn-${color} ${typeFilter === type ? "active" : ""}`}
+                  onClick={() => setTypeFilter(typeFilter === type ? "all" : type)}
+                >
+                  {type}
+                </button>
+              ))}
             </div>
 
             {/* View toggle */}
@@ -653,16 +648,14 @@ export default function Home() {
             </span>
             {(
               [
-                ["Section 8", "#d88840", "Section 8 / HUD"],
-                ["LIHTC", "#4070b8", "LIHTC"],
-                ["Layered", "#c8a840", "Layered HUD / LIHTC"],
+                ["Project Based Section 8", "#ED7D31", "Project Based Section 8"],
+                ["LIHTC", "#4472C4", "LIHTC"],
+                ["Regional HUD", "#FFC000", "Regional HUD (not national HUD)"],
+                ["Conventional & Section 8 Vouchers", "#7030A0", "Conventional & Section 8 Vouchers"],
               ] as const
             ).map(([, color, label]) => (
               <div key={label} className="flex items-center gap-2">
-                <span
-                  className="legend-dot"
-                  style={{ background: color }}
-                />
+                <span className="legend-swatch" style={{ background: color }} />
                 <span
                   className="text-xs font-semibold"
                   style={{ color: "oklch(0.65 0.010 240)" }}
