@@ -9,7 +9,7 @@
 - [x] Match verified links to active directory properties and update only high-confidence records.
 - [x] Verify the revised directory, save a checkpoint, and report unmatched properties.
 - [x] Change Crossroads of Lee Summit from Classification Pending to LIHTC and verify the update.
-- [ ] Check GitHub access and determine whether the project already has a repository.
+- [x] Check GitHub access and determine whether the project already has a repository.
 - [x] Add a GitHub Pages build-and-deploy workflow suitable for the static directory.
-- [ ] Create or update the repository, push the source, and activate GitHub Pages.
-- [ ] Verify the public Pages URL and report the result.
+- [x] Create or update the repository, push the source, and activate GitHub Pages.
+- [x] Verify the Pages deployment status and report the public URL; GitHub’s edge host may briefly return a setup 404 during first-site propagation.
