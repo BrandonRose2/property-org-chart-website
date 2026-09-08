@@ -548,7 +548,7 @@ export default function Home() {
               >
                 ALL
               </button>
-              {[1, 2, 3, 4, 5].map((r) => (
+              {Object.keys(REGIONS).map(Number).map((r) => (
                 <button
                   key={r}
                   className={`filter-btn ${regionFilter === r ? "active" : ""}`}

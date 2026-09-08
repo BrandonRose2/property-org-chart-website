@@ -59,4 +59,4 @@ The source document is revised **11/3/2025** and reports **3,726 total units** a
 
 ## Website Reconciliation Result
 
-All source-listed active properties now use the source-chart color category. The following properties are not shown on the source chart and are intentionally marked **Classification Pending** rather than inferred: **New Wilmington Arms**, **Riverchase**, and **Crossroads of Lee Summit**. The web legend uses source-accurate swatches: `#ED7D31` orange, `#4472C4` blue, `#FFC000` yellow, and `#7030A0` purple.
+All source-listed active properties now use the source-chart color category. **New Wilmington Arms (NWA)** is consolidated as a Region 4 Project Based Section 8 property, consistent with the source-chart NWA entry. The remaining properties not shown on the source chart — **Riverchase** and **Crossroads of Lee Summit** — remain intentionally marked **Classification Pending** rather than inferred. The web legend uses source-accurate swatches: `#ED7D31` orange, `#4472C4` blue, `#FFC000` yellow, and `#7030A0` purple.

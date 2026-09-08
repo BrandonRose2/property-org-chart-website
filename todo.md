@@ -2,3 +2,6 @@
 - [x] Compare the document data against the website property records and resolve discrepancies.
 - [x] Update property labels, filters, badges, and color legend to match the org chart.
 - [x] Verify the rendered directory, save a checkpoint, and report the completed revisions.
+- [x] Remove Region 5 and its properties from the directory data and controls.
+- [x] Consolidate New Wilmington Arms as NWA in Region 4 and verify the revised totals.
+- [x] Save a checkpoint and deliver the revised directory.

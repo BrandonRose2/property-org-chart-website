@@ -36,8 +36,7 @@ export const REGIONS: Record<number, Region> = {
   1: { id: 1, label: "Region 1", states: "FL · MS", color: "#6b7280" },
   2: { id: 2, label: "Region 2", states: "OH · TX · CA · MO", color: "#4070b8" },
   3: { id: 3, label: "Region 3", states: "LA · FL", color: "#4070b8" },
-  4: { id: 4, label: "Region 4", states: "AR · CA · GA", color: "#d88840" },
-  5: { id: 5, label: "Region 5", states: "NC", color: "#d88840" },
+  4: { id: 4, label: "Region 4", states: "CA · GA", color: "#d88840" },
 };
 
 export const PROPERTY_TYPES: Record<PropertyType, { label: string; colorClass: string; dotColor: string; pinColor: string }> = {
@@ -66,7 +65,6 @@ export const PROPERTIES: Property[] = [
   { id: 13, name: "Grace Townhomes", region: 2, address: "1212 Grace Circle", city: "Ennis", state: "TX", units: 112, type: "LIHTC", website: "", apartmentsCom: "https://www.apartments.com/grace-townhomes-ennis-tx/f2pdser/", notes: "", lat: 32.3240, lng: -96.6210 },
   { id: 14, name: "Grove Park Terrace", region: 2, address: "400 Peters St", city: "Waxahachie", state: "TX", units: 60, type: "Project Based Section 8", website: "", apartmentsCom: "https://www.apartments.com/grove-park-terrace-waxahachie-tx/lc874fd/", notes: "Layered HUD / LIHTC", lat: 32.3868, lng: -96.8453 },
   { id: 15, name: "La Promesa", region: 2, address: "", city: "Odessa", state: "TX", units: 136, type: "Project Based Section 8", website: "https://lapromesaodessa.com/", apartmentsCom: "", notes: "Layered HUD / LIHTC", lat: 31.8457, lng: -102.3677 },
-  { id: 16, name: "New Wilmington Arms", region: 2, address: "700 W. Laurel Avenue", city: "Compton", state: "CA", units: null, type: "Pending Review", website: "https://newwilmingtonarms.loftliving.com/", apartmentsCom: "https://www.apartments.com/new-wilmington-arms-apartments-compton-ca/z19ppgw/", notes: "Not classified in the 11/3/2025 source chart", lat: 33.8958, lng: -118.2201 },
   { id: 44, name: "Crossroads of Lee Summit", region: 2, address: "NE Town Centre Blvd", city: "Lee's Summit", state: "MO", units: 160, type: "Pending Review", website: "", apartmentsCom: "", notes: "Added after the source chart; classification pending", lat: 38.9108, lng: -94.3477 },
 
   // Region 3 — LA · FL
@@ -84,8 +82,8 @@ export const PROPERTIES: Property[] = [
   { id: 28, name: "Howell Place", region: 3, address: "4150 72nd Avenue", city: "Baton Rouge", state: "LA", units: 48, type: "LIHTC", website: "https://howellplaceapts.com/", apartmentsCom: "https://www.apartments.com/howell-place-apartments-baton-rouge-la/", notes: "", lat: 30.4515, lng: -91.1871 },
   { id: 29, name: "Pirates Bend", region: 3, address: "8165 Plank Road", city: "Baton Rouge", state: "LA", units: 48, type: "LIHTC", website: "https://piratesbendapts.com/", apartmentsCom: "https://www.apartments.com/pirates-bend-apartments-baton-rouge-la/", notes: "", lat: 30.5015, lng: -91.1571 },
 
-  // Region 4 — AR · CA · GA
-  { id: 30, name: "NWA", region: 4, address: "", city: "Bentonville", state: "AR", units: 162, type: "Project Based Section 8", website: "", apartmentsCom: "", notes: "Northwest Arkansas", lat: 36.3729, lng: -94.2088 },
+  // Region 4 — CA · GA
+  { id: 30, name: "New Wilmington Arms (NWA)", region: 4, address: "700 W. Laurel Avenue", city: "Compton", state: "CA", units: 162, type: "Project Based Section 8", website: "https://newwilmingtonarms.loftliving.com/", apartmentsCom: "https://www.apartments.com/new-wilmington-arms-apartments-compton-ca/z19ppgw/", notes: "Listed as NWA on the source org chart", lat: 33.8958, lng: -118.2201 },
   { id: 31, name: "Anaheim", region: 4, address: "", city: "Anaheim", state: "CA", units: 80, type: "Project Based Section 8", website: "", apartmentsCom: "", notes: "75 HUD / 5 voucher", lat: 33.8366, lng: -117.9143 },
   { id: 32, name: "Fairfax", region: 4, address: "737 1/2 S Genesee Ave", city: "Los Angeles", state: "CA", units: 46, type: "Project Based Section 8", website: "", apartmentsCom: "https://www.apartments.com/fairfax-townhomes-los-angeles-ca/l98jvpf/", notes: "45 HUD / 1 voucher", lat: 34.0522, lng: -118.3617 },
   { id: 33, name: "Urban 1 & 2", region: 4, address: "", city: "Los Angeles", state: "CA", units: 60, type: "Project Based Section 8", website: "", apartmentsCom: "", notes: "", lat: 34.0522, lng: -118.2437 },
@@ -98,9 +96,6 @@ export const PROPERTIES: Property[] = [
   { id: 40, name: "River Garden", region: 4, address: "", city: "Sonora", state: "CA", units: 123, type: "LIHTC", website: "", apartmentsCom: "", notes: "", lat: 37.9853, lng: -120.3835 },
   { id: 41, name: "Riverchase", region: 4, address: "106 Tybee Court", city: "Augusta", state: "GA", units: null, type: "Pending Review", website: "https://riverchaseaugusta.com/", apartmentsCom: "https://www.apartments.com/riverchase-rental-homes-augusta-ga/j35t2y7/", notes: "Not classified in the 11/3/2025 source chart", lat: 33.4559, lng: -81.9342 },
 
-  // Region 5 — NC
-  { id: 42, name: "Silver Springs Terrace", region: 5, address: "950 NE 20th Street", city: "Hickory", state: "NC", units: 100, type: "Project Based Section 8", website: "https://www.silver-street.net/property/silver-springs-apartments/", apartmentsCom: "https://www.apartments.com/silver-springs-terrace-hickory-nc/h8sycw1/", notes: "55 layered / 45 LIHTC - voucher", lat: 35.7332, lng: -81.3412 },
-  { id: 43, name: "Thomasville Church Homes", region: 5, address: "904 Doak Street", city: "Thomasville", state: "NC", units: 100, type: "Project Based Section 8", website: "", apartmentsCom: "https://www.apartments.com/thomasville-church-homes-thomasville-nc/g33swlz/", notes: "", lat: 35.8926, lng: -80.0994 },
 ];
 
 export function getRegionStats(regionId: number) {
