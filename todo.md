@@ -7,4 +7,9 @@
 - [x] Save a checkpoint and deliver the revised directory.
 - [x] Collect official property website links from apartmentcorp.com and verify each source.
 - [x] Match verified links to active directory properties and update only high-confidence records.
-- [ ] Verify the revised directory, save a checkpoint, and report unmatched properties.
+- [x] Verify the revised directory, save a checkpoint, and report unmatched properties.
+- [x] Change Crossroads of Lee Summit from Classification Pending to LIHTC and verify the update.
+- [ ] Check GitHub access and determine whether the project already has a repository.
+- [x] Add a GitHub Pages build-and-deploy workflow suitable for the static directory.
+- [ ] Create or update the repository, push the source, and activate GitHub Pages.
+- [ ] Verify the public Pages URL and report the result.
