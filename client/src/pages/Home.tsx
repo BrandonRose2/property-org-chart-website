@@ -6,7 +6,9 @@
  * yellow = Regional HUD; purple = Conventional & Section 8 Vouchers.
  */
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import {
   PROPERTIES,
   REGIONS,
@@ -16,7 +18,6 @@ import {
   type Property,
   type PropertyType,
 } from "@/lib/properties";
-import { MapView } from "@/components/Map";
 import {
   Building2,
   MapPin,
@@ -268,76 +269,74 @@ function RegionPanel({
 // ─── Map View ─────────────────────────────────────────────────────────────────
 
 function PropertyMapView({ properties }: { properties: Property[] }) {
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  // Leaflet + OpenStreetMap: no API key, no dependency on the Manus maps proxy.
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const mapRef = useRef<L.Map | null>(null);
+  const layerRef = useRef<L.LayerGroup | null>(null);
 
-  const handleMapReady = useCallback(
-    (map: google.maps.Map) => {
-      const bounds = new google.maps.LatLngBounds();
-      const infoWindow = new google.maps.InfoWindow();
+  useEffect(() => {
+    if (!containerRef.current || mapRef.current) return;
+    const map = L.map(containerRef.current, { scrollWheelZoom: true });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: "&copy; OpenStreetMap contributors",
+    }).addTo(map);
+    map.setView([33, -92], 4);
+    mapRef.current = map;
+    layerRef.current = L.layerGroup().addTo(map);
+    return () => {
+      map.remove();
+      mapRef.current = null;
+    };
+  }, []);
 
-      properties.forEach((prop) => {
-        if (!prop.lat || !prop.lng) return;
+  useEffect(() => {
+    const map = mapRef.current;
+    const layer = layerRef.current;
+    if (!map || !layer) return;
+    layer.clearLayers();
+    const points: L.LatLngExpression[] = [];
 
-        const typeInfo = PROPERTY_TYPES[prop.type];
-        const marker = new google.maps.Marker({
-          position: { lat: prop.lat, lng: prop.lng },
-          map,
-          title: prop.name,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 8,
-            fillColor: typeInfo.pinColor,
-            fillOpacity: 0.9,
-            strokeColor: "#ffffff",
-            strokeWeight: 1.5,
-          },
-        });
+    properties.forEach((prop) => {
+      if (!prop.lat || !prop.lng) return;
+      const typeInfo = PROPERTY_TYPES[prop.type];
+      const addressLine = [prop.address, prop.city, prop.state].filter(Boolean).join(", ");
+      const links = [
+        prop.website ? `<a href="${prop.website}" target="_blank" style="color:#5080c8">Official Site</a>` : "",
+        prop.apartmentsCom ? `<a href="${prop.apartmentsCom}" target="_blank" style="color:#5080c8">Apts.com</a>` : "",
+      ]
+        .filter(Boolean)
+        .join(" · ");
 
-        marker.addListener("click", () => {
-          setSelectedProperty(prop);
-          const addressLine = [prop.address, prop.city, prop.state]
-            .filter(Boolean)
-            .join(", ");
-          const links = [
-            prop.website
-              ? `<a href="${prop.website}" target="_blank" style="color:#5080c8">Official Site</a>`
-              : "",
-            prop.apartmentsCom
-              ? `<a href="${prop.apartmentsCom}" target="_blank" style="color:#5080c8">Apts.com</a>`
-              : "",
-          ]
-            .filter(Boolean)
-            .join(" · ");
+      L.circleMarker([prop.lat, prop.lng], {
+        radius: 8,
+        fillColor: typeInfo.pinColor,
+        fillOpacity: 0.9,
+        color: "#ffffff",
+        weight: 1.5,
+      })
+        .bindTooltip(prop.name)
+        .bindPopup(`
+          <div style="font-family:'Rajdhani',sans-serif;min-width:180px;padding:4px">
+            <div style="font-weight:800;font-size:14px;margin-bottom:4px">${prop.name}</div>
+            <div style="font-size:11px;color:#666;margin-bottom:4px">${addressLine}</div>
+            ${prop.units ? `<div style="font-size:11px;font-weight:600;margin-bottom:4px">${prop.units} units</div>` : ""}
+            <div style="font-size:10px;font-weight:700;color:${typeInfo.dotColor};margin-bottom:6px">${typeInfo.label}</div>
+            ${links ? `<div style="font-size:11px">${links}</div>` : ""}
+          </div>
+        `)
+        .addTo(layer);
+      points.push([prop.lat, prop.lng]);
+    });
 
-          infoWindow.setContent(`
-            <div style="font-family:'Rajdhani',sans-serif;min-width:180px;padding:4px">
-              <div style="font-weight:800;font-size:14px;margin-bottom:4px">${prop.name}</div>
-              <div style="font-size:11px;color:#666;margin-bottom:4px">${addressLine}</div>
-              ${prop.units ? `<div style="font-size:11px;font-weight:600;margin-bottom:4px">${prop.units} units</div>` : ""}
-              <div style="font-size:10px;font-weight:700;color:${typeInfo.dotColor};margin-bottom:6px">${typeInfo.label}</div>
-              ${links ? `<div style="font-size:11px">${links}</div>` : ""}
-            </div>
-          `);
-          infoWindow.open(map, marker);
-        });
-
-        bounds.extend({ lat: prop.lat, lng: prop.lng });
-      });
-
-      if (properties.length > 0) {
-        map.fitBounds(bounds);
-        const listener = google.maps.event.addListener(map, "idle", () => {
-          if ((map.getZoom() ?? 0) > 12) map.setZoom(12);
-          google.maps.event.removeListener(listener);
-        });
-      }
-    },
-    [properties]
-  );
+    if (points.length > 0) {
+      map.fitBounds(L.latLngBounds(points), { padding: [30, 30], maxZoom: 12 });
+    }
+  }, [properties]);
 
   return (
     <div className="map-container">
-      <MapView onMapReady={handleMapReady} />
+      <div ref={containerRef} style={{ width: "100%", height: "100%", minHeight: 500 }} />
     </div>
   );
 }
