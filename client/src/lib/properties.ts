@@ -33,7 +33,7 @@ export interface Region {
 }
 
 export const REGIONS: Record<number, Region> = {
-  1: { id: 1, label: "Region 1", states: "FL · MS", color: "#6b7280" },
+  1: { id: 1, label: "Region 1", states: "FL · MS · NC", color: "#6b7280" },
   2: { id: 2, label: "Region 2", states: "OH · TX · CA · MO", color: "#4070b8" },
   3: { id: 3, label: "Region 3", states: "LA · FL", color: "#4070b8" },
   4: { id: 4, label: "Region 4", states: "CA · GA", color: "#d88840" },
@@ -48,7 +48,7 @@ export const PROPERTY_TYPES: Record<PropertyType, { label: string; colorClass: s
 };
 
 export const PROPERTIES: Property[] = [
-  // Region 1 — FL · MS
+  // Region 1 — FL · MS · NC
   { id: 1, name: "Boca Ciega", region: 1, address: "3401 37th Street South", city: "St. Petersburg", state: "FL", units: 109, type: "Project Based Section 8", website: "https://bocaciegaresort.com/", apartmentsCom: "https://www.apartments.com/boca-ciega-point-east-condominimums-saint-petersburg-fl/60lj1ns/", notes: "108 layered / 1 LIHTC", lat: 27.7360, lng: -82.6880 },
   { id: 2, name: "Jefferson Arms", region: 1, address: "1425 E. Clark Ave", city: "Monticello", state: "FL", units: 75, type: "Project Based Section 8", website: "https://jeffersonarmsapartments.com/", apartmentsCom: "https://www.apartments.com/jefferson-arms-apartments-monticello-fl/", notes: "", lat: 30.5443, lng: -83.8710 },
   { id: 3, name: "Opa Locka (135th Street)", region: 1, address: "2860 NW 135th Street", city: "Opa Locka", state: "FL", units: 65, type: "Project Based Section 8", website: "", apartmentsCom: "https://www.apartments.com/135th-street-apartments-opa-locka-fl/m7zbpnl/", notes: "Listed as 135th Street Apts", lat: 25.9073, lng: -80.2494 },
@@ -57,6 +57,7 @@ export const PROPERTIES: Property[] = [
   { id: 6, name: "Holiday Apartments", region: 1, address: "601 Old Washington Road", city: "Natchez", state: "MS", units: 115, type: "Project Based Section 8", website: "", apartmentsCom: "https://www.apartments.com/holiday-apartments-natchez-ms/9b2xv67/", notes: "", lat: 31.5607, lng: -91.4032 },
   { id: 7, name: "Cumberland Apartments", region: 1, address: "100 Cumberland Drive", city: "Crystal Springs", state: "MS", units: 68, type: "Project Based Section 8", website: "", apartmentsCom: "https://www.apartments.com/cumberland-apartments-crystal-springs-ms/", notes: "60 HUD / 8 voucher", lat: 31.9877, lng: -90.3571 },
   { id: 9, name: "Walnut Hill", region: 1, address: "", city: "Natchez", state: "MS", units: 168, type: "LIHTC", website: "", apartmentsCom: "", notes: "", lat: 31.5604, lng: -91.4032 },
+  { id: 45, name: "Silver Springs Terrace", region: 1, address: "950 20th Street NE", city: "Hickory", state: "NC", units: null, type: "Pending Review", website: "", apartmentsCom: "", notes: "Unit count & program type to confirm", lat: 35.7570, lng: -81.3225 },
 
   // Region 2 — OH · TX · CA · MO
   { id: 10, name: "River Pointe", region: 2, address: "777 Avonia Drive", city: "Columbus", state: "OH", units: 160, type: "LIHTC", website: "https://www.riverpointeresidence.com", apartmentsCom: "https://www.apartments.com/river-pointe-apartments-columbus-oh/qpb5tdy/", notes: "", lat: 39.9366, lng: -83.1202 },
